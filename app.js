@@ -19,7 +19,8 @@ var indexRoutes          = require("./routes/index");
 
 
 //seedDB(); //SEED Database
-mongoose.connect(process.env.DATABASEURL);
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
