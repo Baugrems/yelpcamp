@@ -20,7 +20,7 @@ var indexRoutes          = require("./routes/index");
 
 //seedDB(); //SEED Database
 
-mongoose.connect("mongodb://baugrems:banana@ds131329.mlab.com:31329/yelpcampbaugrems");
+mongoose.connect("mongodb://chewie:han@ds131329.mlab.com:31329/yelpcampbaugrems");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
